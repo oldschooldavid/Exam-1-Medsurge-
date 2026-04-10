@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam 1 Study Guide — Nursing</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg: #f7f4ef;
+--bg2: #f0ece4;
+--surface: #ffffff;
+--ink: #1a1714;
+--ink2: #3d3730;
+--ink3: #6b6259;
+--red: #b5282a;
+--red-light: #fdf1f1;
+--green: #2d6a4f;
+--green-light: #f0f7f4;
+--navy: #1b3a5c;
+--navy-light: #f0f4f8;
+--brown: #7b4f2e;
+--brown-light: #faf5f0;
+--purple: #5b3a7e;
+--purple-light: #f5f0fa;
+--amber: #b8860b;
+--amber-light: #fdf8ee;
+--border: #e0d9cf;
+--mono: 'IBM Plex Mono', monospace;
+--serif: 'Lora', serif;
+--display: 'Syne', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+background: var(–bg);
+color: var(–ink);
+font-family: var(–serif);
+line-height: 1.7;
+min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.site-header {
+background: var(–ink);
+color: var(–bg);
+padding: 2rem 1.5rem 1.5rem;
+position: sticky;
+top: 0;
+z-index: 100;
+border-bottom: 3px solid var(–red);
+}
+.header-inner { max-width: 1100px; margin: 0 auto; }
+.site-header h1 {
+font-family: var(–display);
+font-size: clamp(1.3rem, 4vw, 2rem);
+font-weight: 800;
+letter-spacing: -0.02em;
+line-height: 1.1;
+}
+.site-header .subtitle {
+font-family: var(–mono);
+font-size: 0.7rem;
+color: #aaa;
+margin-top: 0.3rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.exam-badge {
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+background: var(–red);
+color: white;
+font-family: var(–mono);
+font-size: 0.65rem;
+padding: 0.2rem 0.6rem;
+border-radius: 2px;
+margin-top: 0.6rem;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+}
+
+/* ── TABS ── */
+.tab-nav {
+background: var(–bg2);
+border-bottom: 2px solid var(–border);
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+position: sticky;
+top: 92px;
+z-index: 90;
+}
+.tab-nav::-webkit-scrollbar { height: 3px; }
+.tab-nav::-webkit-scrollbar-thumb { background: var(–border); }
+.tab-list {
+display: flex;
+list-style: none;
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 1rem;
+gap: 0;
+min-width: max-content;
+}
+.tab-list li button {
+background: none;
+border: none;
+cursor: pointer;
+font-family: var(–display);
+font-size: 0.78rem;
+font-weight: 700;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: var(–ink3);
+padding: 0.85rem 1rem;
+border-bottom: 3px solid transparent;
+transition: all 0.2s;
+white-space: nowrap;
+}
+.tab-list li button:hover { color: var(–ink); }
+.tab-list li button.active {
+color: var(–ink);
+border-bottom-color: var(–red);
+}
+
+/* ── MAIN CONTENT ── */
+.main { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ── SECTION TITLES ── */
+.section-title {
+font-family: var(–display);
+font-size: clamp(1.4rem, 3vw, 2.1rem);
+font-weight: 800;
+letter-spacing: -0.03em;
+margin-bottom: 0.25rem;
+line-height: 1.1;
+}
+.section-meta {
+font-family: var(–mono);
+font-size: 0.68rem;
+color: var(–ink3);
+letter-spacing: 0.08em;
+text-transform: uppercase;
+margin-bottom: 2rem;
+padding-bottom: 0.75rem;
+border-bottom: 1px solid var(–border);
+}
+
+/* ── CARDS ── */
+.card {
+background: var(–surface);
+border-radius: 6px;
+border: 1px solid var(–border);
+margin-bottom: 1.25rem;
+overflow: hidden;
+box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.card-red { border-left: 5px solid var(–red); }
+.card-green { border-left: 5px solid var(–green); }
+.card-navy { border-left: 5px solid var(–navy); }
+.card-brown { border-left: 5px solid var(–brown); }
+.card-purple { border-left: 5px solid var(–purple); }
+.card-amber { border-left: 5px solid var(–amber); }
+
+.card-header {
+padding: 1rem 1.25rem 0.75rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 0.75rem;
+cursor: pointer;
+user-select: none;
+}
+.card-header:hover { background: var(–bg); }
+.card-title {
+font-family: var(–display);
+font-size: 1rem;
+font-weight: 700;
+letter-spacing: -0.01em;
+}
+.card-tag {
+font-family: var(–mono);
+font-size: 0.6rem;
+padding: 0.18rem 0.5rem;
+border-radius: 3px;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+white-space: nowrap;
+flex-shrink: 0;
+}
+.tag-red { background: var(–red-light); color: var(–red); }
+.tag-green { background: var(–green-light); color: var(–green); }
+.tag-navy { background: var(–navy-light); color: var(–navy); }
+.tag-brown { background: var(–brown-light); color: var(–brown); }
+.tag-purple { background: var(–purple-light); color: var(–purple); }
+.tag-amber { background: var(–amber-light); color: var(–amber); }
+
+.chevron {
+width: 20px; height: 20px;
+flex-shrink: 0;
+color: var(–ink3);
+transition: transform 0.25s;
+}
+.card.open .chevron { transform: rotate(180deg); }
+
+.card-body {
+display: none;
+padding: 0 1.25rem 1.25rem;
+}
+.card.open .card-body { display: block; }
+
+.card-body h4 {
+font-family: var(–display);
+font-size: 0.85rem;
+font-weight: 700;
+letter-spacing: 0.02em;
+text-transform: uppercase;
+color: var(–ink3);
+margin: 1rem 0 0.5rem;
+padding-bottom: 0.25rem;
+border-bottom: 1px dashed var(–border);
+}
+.card-body h4:first-child { margin-top: 0; }
+
+.card-body p { font-size: 0.9rem; margin-bottom: 0.6rem; }
+.card-body ul { padding-left: 1.25rem; margin-bottom: 0.6rem; }
+.card-body li { font-size: 0.9rem; margin-bottom: 0.3rem; }
+.card-body strong { font-weight: 600; }
+
+/* ── ALERTS ── */
+.alert {
+padding: 0.85rem 1rem;
+border-radius: 4px;
+margin-bottom: 0.85rem;
+font-size: 0.88rem;
+border-left: 4px solid;
+}
+.alert-danger { background: var(–red-light); border-color: var(–red); color: #7a1010; }
+.alert-info { background: var(–navy-light); border-color: var(–navy); color: #0f2d4a; }
+.alert-pearl { background: var(–green-light); border-color: var(–green); color: #1b4a36; }
+.alert-amber { background: var(–amber-light); border-color: var(–amber); color: #7a5500; }
+
+.alert .alert-label {
+font-family: var(–mono);
+font-size: 0.65rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+display: block;
+margin-bottom: 0.25rem;
+}
+
+/* ── LAB TABLE ── */
+.lab-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; margin-bottom: 0.75rem; }
+.lab-table th {
+font-family: var(–mono);
+font-size: 0.64rem;
+text-transform: uppercase;
+letter-spacing: 0.07em;
+background: var(–bg2);
+padding: 0.5rem 0.75rem;
+text-align: left;
+border-bottom: 2px solid var(–border);
+color: var(–ink3);
+}
+.lab-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(–border); vertical-align: middle; }
+.lab-table tr:hover td { background: var(–bg); }
+.lab-ref {
+font-family: var(–mono);
+font-size: 0.7rem;
+background: var(–green-light);
+color: var(–green);
+padding: 0.15rem 0.45rem;
+border-radius: 3px;
+white-space: nowrap;
+}
+.lab-critical {
+font-family: var(–mono);
+font-size: 0.7rem;
+background: var(–red-light);
+color: var(–red);
+padding: 0.15rem 0.45rem;
+border-radius: 3px;
+white-space: nowrap;
+}
+
+/* ── MED TABLE ── */
+.med-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+.med-table th {
+font-family: var(–mono);
+font-size: 0.63rem;
+text-transform: uppercase;
+letter-spacing: 0.07em;
+background: var(–ink);
+color: var(–bg);
+padding: 0.55rem 0.75rem;
+text-align: left;
+}
+.med-table td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(–border); vertical-align: top; }
+.med-table tr:nth-child(even) td { background: var(–bg); }
+.med-class {
+font-family: var(–mono);
+font-size: 0.65rem;
+padding: 0.12rem 0.4rem;
+border-radius: 3px;
+}
+
+/* ── MIND MAP ── */
+.mindmap-container {
+background: var(–bg2);
+border-radius: 6px;
+padding: 1rem;
+margin-top: 0.75rem;
+overflow-x: auto;
+}
+.mindmap { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.mm-center {
+background: var(–ink);
+color: var(–bg);
+font-family: var(–display);
+font-size: 0.85rem;
+font-weight: 700;
+padding: 0.6rem 1.2rem;
+border-radius: 4px;
+text-align: center;
+}
+.mm-branches {
+display: flex;
+flex-wrap: wrap;
+gap: 0.6rem;
+justify-content: center;
+}
+.mm-branch {
+border-radius: 4px;
+padding: 0.5rem 0.8rem;
+font-size: 0.78rem;
+font-family: var(–serif);
+font-weight: 500;
+text-align: center;
+max-width: 180px;
+line-height: 1.4;
+border: 1px solid;
+}
+.mm-red { background: var(–red-light); color: var(–red); border-color: #e8b4b4; }
+.mm-green { background: var(–green-light); color: var(–green); border-color: #b4d4c4; }
+.mm-navy { background: var(–navy-light); color: var(–navy); border-color: #b4c8dc; }
+.mm-brown { background: var(–brown-light); color: var(–brown); border-color: #d4bea8; }
+.mm-purple { background: var(–purple-light); color: var(–purple); border-color: #c8b4dc; }
+.mm-amber { background: var(–amber-light); color: var(–amber); border-color: #dcc880; }
+
+.mm-sub { font-size: 0.72rem; font-style: italic; margin-top: 0.2rem; opacity: 0.85; }
+
+/* ── GRID LAYOUTS ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+@media (max-width: 700px) {
+.two-col, .three-col { grid-template-columns: 1fr; }
+}
+
+/* ── INLINE MONO ── */
+code {
+font-family: var(–mono);
+font-size: 0.82em;
+background: var(–bg2);
+padding: 0.1em 0.35em;
+border-radius: 3px;
+color: var(–brown);
+}
+
+/* ── NCLEX PEARL ── */
+.nclex-pearl {
+background: linear-gradient(135deg, var(–green-light) 0%, #e8f5f0 100%);
+border: 1px solid #b4d4c4;
+border-left: 4px solid var(–green);
+border-radius: 4px;
+padding: 0.85rem 1rem;
+margin: 0.75rem 0;
+font-size: 0.87rem;
+}
+.nclex-pearl .pearl-label {
+font-family: var(–mono);
+font-size: 0.62rem;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+color: var(–green);
+font-weight: 600;
+display: block;
+margin-bottom: 0.25rem;
+}
+
+/* ── DIVIDER ── */
+hr.section-divider {
+border: none;
+border-top: 1px dashed var(–border);
+margin: 1.5rem 0;
+}
+
+/* ── OVERVIEW BANNER ── */
+.overview-banner {
+background: var(–ink);
+color: var(–bg);
+border-radius: 6px;
+padding: 1.25rem 1.5rem;
+margin-bottom: 1.5rem;
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+align-items: center;
+}
+.overview-banner h2 {
+font-family: var(–display);
+font-size: 1.1rem;
+font-weight: 800;
+margin-bottom: 0.2rem;
+}
+.overview-banner p { font-size: 0.85rem; color: #ccc; }
+.overview-topics {
+display: flex;
+flex-wrap: wrap;
+gap: 0.4rem;
+margin-top: 0.75rem;
+}
+.topic-chip {
+font-family: var(–mono);
+font-size: 0.62rem;
+padding: 0.2rem 0.5rem;
+border-radius: 2px;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+background: rgba(255,255,255,0.1);
+color: #ddd;
+}
+.topic-chip.highlight { background: var(–red); color: white; }
+
+/* ── RESPONSIVE TWEAKS ── */
+@media (max-width: 600px) {
+.site-header { padding: 1rem; }
+.tab-list li button { padding: 0.75rem 0.75rem; font-size: 0.72rem; }
+.main { padding: 1.25rem 1rem 3rem; }
+.card-header { padding: 0.85rem 1rem 0.65rem; }
+.card-body { padding: 0 1rem 1rem; }
+}
+
+/* ── DOSAGE BOX ── */
+.dosage-box {
+background: var(–purple-light);
+border: 1px solid #c8b4dc;
+border-left: 4px solid var(–purple);
+border-radius: 4px;
+padding: 0.85rem 1rem;
+margin: 0.75rem 0;
+font-size: 0.88rem;
+}
+.dosage-box .dosage-label {
+font-family: var(–mono);
+font-size: 0.62rem;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+color: var(–purple);
+font-weight: 600;
+display: block;
+margin-bottom: 0.3rem;
+}
+.dosage-formula {
+font-family: var(–mono);
+font-size: 0.85rem;
+color: var(–purple);
+background: rgba(91,58,126,0.08);
+padding: 0.4rem 0.6rem;
+border-radius: 3px;
+margin-top: 0.4rem;
+display: block;
+}
+
+/* ── SMOOTH OPEN ANIMATION ── */
+.card-body { animation: fadeIn 0.2s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+</head>
+<body>
+
+<header class="site-header">
+<div class="header-inner">
+<h1>Exam 1 Study Guide</h1>
+<p class="subtitle">Med Administration · Respiratory · Cardiac (High Yield)</p>
+<div class="exam-badge">⚠ Cardiac — High Volume of Questions</div>
+</div>
+</header>
+
+<nav class="tab-nav" aria-label="Topic Navigation">
+<ul class="tab-list" role="tablist">
+<li><button class="active" onclick="showTab('overview', this)" role="tab">Overview</button></li>
+<li><button onclick="showTab('cardiac', this)" role="tab">Cardiac</button></li>
+<li><button onclick="showTab('respiratory', this)" role="tab">Respiratory</button></li>
+<li><button onclick="showTab('medications', this)" role="tab">Medications</button></li>
+<li><button onclick="showTab('labs', this)" role="tab">Labs &amp; Electrolytes</button></li>
+<li><button onclick="showTab('assessment', this)" role="tab">Assessment</button></li>
+<li><button onclick="showTab('dosage', this)" role="tab">Dosage Calc</button></li>
+<li><button onclick="showTab('procedures', this)" role="tab">Procedures</button></li>
+</ul>
+</nav>
+
+<main class="main">
+
+<!-- ═══════════════════════ OVERVIEW ═══════════════════════ -->
+
+<section id="overview" class="tab-panel active">
+<div class="section-title">Exam 1 Overview</div>
+<div class="section-meta">Topics · Weights · Strategy</div>
+
+<div class="overview-banner">
+<div>
+<h2>What's on the Exam?</h2>
+<p>Med administration, respiratory, and cardiac — with the <strong style="color:var(--red)">heaviest weight on cardiac</strong>. Neuro is NOT on this exam (Exam 2).</p>
+<div class="overview-topics">
+<span class="topic-chip highlight">HTN</span>
+<span class="topic-chip highlight">MI</span>
+<span class="topic-chip highlight">CHF</span>
+<span class="topic-chip highlight">Pericarditis</span>
+<span class="topic-chip highlight">Mitral Valve Surgery</span>
+<span class="topic-chip highlight">Thromboembolism</span>
+<span class="topic-chip">Heparin / Lovenox / Coumadin</span>
+<span class="topic-chip">ACE Inhibitors</span>
+<span class="topic-chip">Beta Blockers</span>
+<span class="topic-chip">Salmeterol</span>
+<span class="topic-chip">Beclomethasone</span>
+<span class="topic-chip">Influenza</span>
+<span class="topic-chip">Lung Sounds</span>
+<span class="topic-chip">Cardiac Assessment</span>
+<span class="topic-chip">Tracheostomy</span>
+<span class="topic-chip">CT / MRI</span>
+<span class="topic-chip">Electrolytes</span>
+<span class="topic-chip">3 Dosage Qs</span>
+</div>
+</div>
+</div>
+
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Professor Note — High Priority</span>
+Cardiac has the <strong>most questions</strong>. Know all cardiac diseases including treatments, S&amp;S, and nursing interventions. Go back and study the <strong>CHF case study clinical judgment model</strong> from class.
+</div>
+
+<div class="alert alert-pearl">
+<span class="alert-label">✦ Study Strategy</span>
+Use the ADPIE framework when answering cardiac NCLEX questions: Assess → Diagnose → Plan → Implement → Evaluate. Priority always goes to ABCs + safety.
+</div>
+
+<div class="two-col">
+<div class="card card-red">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Cardiac Topics</span>
+<span class="card-tag tag-red">High Yield</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<ul>
+<li>Hypertension (HTN)</li>
+<li>Myocardial Infarction (MI)</li>
+<li>Mitral Valve Surgery</li>
+<li>Pericarditis</li>
+<li>CHF (+ case study)</li>
+<li>Thromboembolism</li>
+<li>Cardiac Assessment</li>
+<li>ACE Inhibitors &amp; Beta Blockers</li>
+</ul>
+</div>
+</div>
+<div class="card card-navy">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Respiratory Topics</span>
+<span class="card-tag tag-navy">Moderate</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<ul>
+<li>Lung sounds &amp; assessment</li>
+<li>Tracheostomy care</li>
+<li>Salmeterol (LABA)</li>
+<li>Beclomethasone dipropionate (ICS)</li>
+<li>Influenza management</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════ CARDIAC ═══════════════════════ -->
+
+<section id="cardiac" class="tab-panel">
+<div class="section-title">Cardiac Conditions</div>
+<div class="section-meta">HTN · MI · CHF · Pericarditis · Mitral Valve · Thromboembolism</div>
+
+<!-- HTN -->
+
+<div class="card card-red">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Hypertension (HTN)</span>
+<span class="card-tag tag-red">Cardiac</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="mindmap-container">
+<div class="mindmap">
+<div class="mm-center">HYPERTENSION</div>
+<div class="mm-branches">
+<div class="mm-branch mm-red"><strong>Definition</strong><div class="mm-sub">≥130/80 mmHg (ACC/AHA)<br>Stage 1: 130–139/80–89<br>Stage 2: ≥140/≥90<br>Crisis: ≥180/≥120</div></div>
+<div class="mm-branch mm-navy"><strong>S&amp;S</strong><div class="mm-sub">Often asymptomatic ("silent killer")<br>HA, blurred vision, epistaxis<br>Palpitations, fatigue</div></div>
+<div class="mm-branch mm-green"><strong>Treatments</strong><div class="mm-sub">Lifestyle: DASH diet, ↓sodium<br>ACE Inhibitors, ARBs<br>Beta Blockers, CCBs, Diuretics</div></div>
+<div class="mm-branch mm-brown"><strong>Nursing Interventions</strong><div class="mm-sub">Monitor BP both arms<br>Teach dietary modifications<br>Medication compliance<br>Assess for end-organ damage</div></div>
+<div class="mm-branch mm-purple"><strong>Complications</strong><div class="mm-sub">Stroke, CAD, MI<br>Heart failure, CKD<br>Hypertensive encephalopathy</div></div>
+</div>
+</div>
+</div>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Hypertensive Crisis</span>
+BP ≥180/120 mmHg. Urgency = no end-organ damage. Emergency = end-organ damage (chest pain, confusion, papilledema). Requires IV antihypertensives (nitroprusside, labetalol IV). Lower MAP by no more than 25% in first hour.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl</span>
+Always assess BP in BOTH arms. A difference of &gt;10 mmHg may indicate subclavian stenosis or aortic dissection. Report to provider.
+</div>
+<h4>Dietary Management (DASH Diet)</h4>
+<ul>
+<li>Sodium restriction: &lt;2,300 mg/day (ideally &lt;1,500 mg/day)</li>
+<li>High potassium: bananas, sweet potatoes, spinach</li>
+<li>Low saturated fat, rich in whole grains, fruits, vegetables</li>
+<li>Limit alcohol: ≤2 drinks/day (men), ≤1 (women)</li>
+<li>STOP smoking — nicotine causes vasoconstriction</li>
+</ul>
+</div>
+</div>
+
+<!-- MI -->
+
+<div class="card card-red">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Myocardial Infarction (MI)</span>
+<span class="card-tag tag-red">High Yield</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="mindmap-container">
+<div class="mindmap">
+<div class="mm-center">MYOCARDIAL INFARCTION</div>
+<div class="mm-branches">
+<div class="mm-branch mm-red"><strong>Pathophysiology</strong><div class="mm-sub">Coronary artery occlusion → ischemia → infarction<br>STEMI vs NSTEMI<br>Plaque rupture → thrombus</div></div>
+<div class="mm-branch mm-navy"><strong>Classic S&amp;S</strong><div class="mm-sub">Crushing chest pain &gt;20 min<br>Radiating to L arm/jaw/neck<br>Diaphoresis, N/V<br>Dyspnea, anxiety</div></div>
+<div class="mm-branch mm-amber"><strong>Atypical (Women/DM)</strong><div class="mm-sub">Fatigue, indigestion<br>Back/jaw pain only<br>Nausea without chest pain</div></div>
+<div class="mm-branch mm-green"><strong>Diagnostics</strong><div class="mm-sub">12-lead ECG (ST elevation)<br>Troponin I &amp; T (gold standard)<br>CK-MB, BNP<br>CBC, BMP, lipids</div></div>
+<div class="mm-branch mm-brown"><strong>MONA + Treatment</strong><div class="mm-sub">Morphine, O₂, Nitrates, Aspirin<br>Beta Blockers, Heparin<br>PCI within 90 min (door-to-balloon)<br>Thrombolytics if no PCI</div></div>
+<div class="mm-branch mm-purple"><strong>Nursing Priorities</strong><div class="mm-sub">Continuous cardiac monitoring<br>IV access × 2<br>12-lead ECG STAT<br>NPO if PCI likely<br>Assess pain 0–10</div></div>
+</div>
+</div>
+</div>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Time-Critical — STEMI Protocol</span>
+Door-to-balloon time goal: <strong>&lt;90 minutes</strong>. Administer aspirin 325 mg STAT unless contraindicated. Obtain 12-lead ECG within 10 minutes of arrival.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Troponin Timing</span>
+Troponin I rises 3–6 hrs after MI, peaks 14–18 hrs, remains elevated 5–7 days. It is the MOST sensitive and specific biomarker for MI. CK-MB rises faster (3–6 hrs) but normalizes sooner (36–48 hrs).
+</div>
+<h4>MONA Protocol</h4>
+<ul>
+<li><strong>M</strong>orphine — pain relief, reduces preload/afterload (use cautiously; may ↓BP)</li>
+<li><strong>O</strong>xygen — maintain SpO₂ ≥94%</li>
+<li><strong>N</strong>itrates — vasodilation (contraindicated if BP &lt;90 systolic or with PDE5 inhibitors)</li>
+<li><strong>A</strong>spirin — 325 mg PO chewed (antiplatelet)</li>
+</ul>
+<div class="alert alert-info">
+<span class="alert-label">ℹ Post-MI Nursing Care</span>
+Bed rest → activity progression. Continuous telemetry monitoring. Measure I&amp;O. Assess for complications: cardiogenic shock, arrhythmias, heart failure, pericarditis (Dressler's syndrome).
+</div>
+</div>
+</div>
+
+<!-- CHF -->
+
+<div class="card card-navy">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Congestive Heart Failure (CHF)</span>
+<span class="card-tag tag-navy">Case Study</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="mindmap-container">
+<div class="mindmap">
+<div class="mm-center">HEART FAILURE</div>
+<div class="mm-branches">
+<div class="mm-branch mm-red"><strong>Left-Sided HF</strong><div class="mm-sub">↓CO → pulmonary congestion<br>Dyspnea, orthopnea, PND<br>Crackles in lungs<br>S3 gallop</div></div>
+<div class="mm-branch mm-navy"><strong>Right-Sided HF</strong><div class="mm-sub">Often caused by L-HF<br>Peripheral edema<br>JVD, hepatomegaly<br>Ascites, weight gain</div></div>
+<div class="mm-branch mm-green"><strong>Diagnostics</strong><div class="mm-sub">BNP &gt;100 pg/mL (HF likely)<br>CXR: cardiomegaly, effusion<br>Echo: EF &lt;40% (HFrEF)<br>BMP, CBC</div></div>
+<div class="mm-branch mm-brown"><strong>Treatment</strong><div class="mm-sub">ACE inhibitors / ARBs<br>Beta blockers (carvedilol)<br>Diuretics (furosemide)<br>Digoxin (rate control)<br>Fluid restriction</div></div>
+<div class="mm-branch mm-purple"><strong>NYHA Classification</strong><div class="mm-sub">I: No symptoms<br>II: Symptoms with moderate exertion<br>III: Symptoms with minimal exertion<br>IV: Symptoms at rest</div></div>
+<div class="mm-branch mm-amber"><strong>Nursing Interventions</strong><div class="mm-sub">Daily weight (same time, same scale)<br>I&amp;O monitoring<br>Semi-Fowler's or HOB 45°<br>Low-sodium diet (&lt;2g/day)<br>Fluid restriction 1.5–2 L/day</div></div>
+</div>
+</div>
+</div>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Report to Provider</span>
+Weight gain of &gt;2 lbs in 24 hours OR &gt;5 lbs in 1 week indicates fluid retention. Notify provider immediately.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Priority Positioning</span>
+HOB 30–45° (Semi/High-Fowler's) reduces orthopnea and improves respiratory effort by shifting fluid away from lungs. This is a first-line nursing intervention.
+</div>
+<h4>ADPIE — CHF Clinical Judgment (Case Study)</h4>
+<ul>
+<li><strong>Assess:</strong> Breath sounds (crackles), O₂ sat, weight, edema, JVD, BNP, respiratory rate</li>
+<li><strong>Diagnose:</strong> Decreased Cardiac Output; Excess Fluid Volume; Impaired Gas Exchange; Activity Intolerance</li>
+<li><strong>Plan:</strong> Maintain SpO₂ ≥94%, reduce fluid overload, administer meds, patient education</li>
+<li><strong>Implement:</strong> Administer diuretics, O₂ therapy, daily weights, restrict fluids/sodium, elevate HOB</li>
+<li><strong>Evaluate:</strong> Improved breath sounds, weight loss, improved SpO₂, reduced edema</li>
+</ul>
+<div class="alert alert-info">
+<span class="alert-label">ℹ Furosemide (Lasix) Nursing Considerations</span>
+Monitor K⁺ (hypokalemia risk), BP (orthostatic hypotension), urine output. Administer in AM to avoid nocturia. Replace electrolytes as ordered. Teach dietary potassium supplementation.
+</div>
+</div>
+</div>
+
+<!-- PERICARDITIS -->
+
+<div class="card card-brown">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Pericarditis</span>
+<span class="card-tag tag-brown">Cardiac</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="mindmap-container">
+<div class="mindmap">
+<div class="mm-center">PERICARDITIS</div>
+<div class="mm-branches">
+<div class="mm-branch mm-red"><strong>Definition</strong><div class="mm-sub">Inflammation of pericardium<br>Acute or chronic<br>Can lead to cardiac tamponade</div></div>
+<div class="mm-branch mm-navy"><strong>S&amp;S</strong><div class="mm-sub">Sharp, pleuritic chest pain<br>Relieved leaning forward<br>Worse supine<br>Pericardial friction rub</div></div>
+<div class="mm-branch mm-green"><strong>Causes</strong><div class="mm-sub">Viral (Coxsackie most common)<br>Post-MI (Dressler's syndrome)<br>Bacterial, uremia<br>Autoimmune, TB</div></div>
+<div class="mm-branch mm-brown"><strong>Diagnostics</strong><div class="mm-sub">ECG: diffuse ST elevation (saddle-shaped)<br>PR depression<br>Echo: pericardial effusion<br>↑ESR, CRP, WBC</div></div>
+<div class="mm-branch mm-purple"><strong>Treatment</strong><div class="mm-sub">NSAIDs (ibuprofen) + colchicine<br>Restrict activity<br>Treat underlying cause<br>Pericardiocentesis if tamponade</div></div>
+</div>
+</div>
+</div>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Cardiac Tamponade — Beck's Triad</span>
+<strong>Beck's Triad:</strong> Hypotension + Muffled heart sounds + JVD (jugular venous distension). This is a medical emergency requiring immediate pericardiocentesis.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Positioning</span>
+Position patient sitting upright and leaning forward to reduce pain. This separates the inflamed pericardial layers. Avoid supine position.
+</div>
+<h4>Pericarditis vs MI Pain</h4>
+<ul>
+<li><strong>Pericarditis:</strong> Sharp, positional (better leaning forward), friction rub present, saddle-shaped ST elevation on ECG</li>
+<li><strong>MI:</strong> Crushing, pressure-like, radiating, not positional, focal ST elevation, ↑Troponin</li>
+</ul>
+</div>
+</div>
+
+<!-- MITRAL VALVE -->
+
+<div class="card card-purple">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Mitral Valve Surgery</span>
+<span class="card-tag tag-purple">Cardiac</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<h4>Mitral Valve Disorders</h4>
+<ul>
+<li><strong>Mitral Stenosis:</strong> Narrowing of valve → ↓flow from LA→LV → pulmonary congestion. Cause: rheumatic fever. S&S: dyspnea, hemoptysis, atrial fibrillation, opening snap + diastolic murmur.</li>
+<li><strong>Mitral Regurgitation:</strong> Backflow into LA → LA enlargement → pulmonary hypertension. Cause: MVP, rheumatic, IE. S&S: holosystolic murmur at apex radiating to axilla, dyspnea, fatigue.</li>
+</ul>
+<h4>Surgical Interventions</h4>
+<ul>
+<li><strong>Mitral Valve Repair:</strong> Preferred when feasible. Preserves native valve.</li>
+<li><strong>Mitral Valve Replacement:</strong> Mechanical (lifelong anticoagulation with warfarin; target INR 2.5–3.5) or Bioprosthetic (no long-term anticoagulation, shorter durability).</li>
+</ul>
+<div class="alert alert-info">
+<span class="alert-label">ℹ Post-Op Nursing Care — Valve Surgery</span>
+Monitor for arrhythmias (esp. A-fib). Anticoagulation management. Assess for signs of infection (endocarditis). Monitor hemodynamic status. Activity restrictions. Teach signs of prosthetic valve dysfunction.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl</span>
+Patients with mechanical heart valves require lifelong warfarin therapy. Teach INR monitoring, bleeding precautions, and to avoid foods high in Vitamin K (leafy greens affect INR stability).
+</div>
+</div>
+</div>
+
+<!-- THROMBOEMBOLISM -->
+
+<div class="card card-red">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Thromboembolism (DVT / PE)</span>
+<span class="card-tag tag-red">High Yield</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="mindmap-container">
+<div class="mindmap">
+<div class="mm-center">THROMBOEMBOLISM</div>
+<div class="mm-branches">
+<div class="mm-branch mm-red"><strong>Virchow's Triad</strong><div class="mm-sub">Venous stasis<br>Endothelial injury<br>Hypercoagulability</div></div>
+<div class="mm-branch mm-navy"><strong>DVT S&S</strong><div class="mm-sub">Unilateral calf pain, edema<br>Warmth, erythema<br>Positive Homan's sign (non-specific)</div></div>
+<div class="mm-branch mm-red"><strong>PE S&S</strong><div class="mm-sub">Sudden dyspnea, tachycardia<br>Pleuritic chest pain<br>Hemoptysis, hypoxia<br>↓BP (massive PE)</div></div>
+<div class="mm-branch mm-green"><strong>Diagnostics</strong><div class="mm-sub">DVT: Duplex ultrasound<br>PE: CT pulmonary angiography (gold)<br>V/Q scan if contrast contraindicated<br>D-dimer (high sensitivity, low specificity)</div></div>
+<div class="mm-branch mm-brown"><strong>Treatment</strong><div class="mm-sub">Heparin (immediate)<br>Lovenox (LMWH)<br>Warfarin (long-term)<br>IVC filter<br>Thrombolytics (massive PE)</div></div>
+<div class="mm-branch mm-purple"><strong>Prevention</strong><div class="mm-sub">Early ambulation<br>SCDs / TEDs<br>Hydration<br>Prophylactic anticoagulation</div></div>
+</div>
+</div>
+</div>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Massive PE — Life-Threatening</span>
+Signs: Sudden severe dyspnea, hypotension, tachycardia, cyanosis, altered mental status. STAT: O₂, IV access, call rapid response, prepare for thrombolytics or embolectomy.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Heparin Antidote</span>
+Heparin antidote = <strong>Protamine Sulfate</strong>. Warfarin antidote = <strong>Vitamin K</strong> (slow) or FFP (fast). Dabigatran = <strong>Idarucizumab (Praxbind)</strong>.
+</div>
+<h4>Anticoagulation Comparison (See Medications Tab for Full Table)</h4>
+<ul>
+<li><strong>Heparin:</strong> IV or SQ; monitor aPTT (goal 60–100 sec); immediate reversal with protamine sulfate</li>
+<li><strong>Lovenox (enoxaparin):</strong> SQ; weight-based dosing; does NOT require routine aPTT monitoring; do NOT expel air bubble</li>
+<li><strong>Coumadin (warfarin):</strong> PO; monitor PT/INR; many drug/food interactions; takes 3–5 days to achieve therapeutic effect</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════ RESPIRATORY ═══════════════════════ -->
+
+<section id="respiratory" class="tab-panel">
+<div class="section-title">Respiratory</div>
+<div class="section-meta">Lung Sounds · Tracheostomy · Influenza · Inhaler Medications</div>
+
+<!-- LUNG SOUNDS -->
+
+<div class="card card-navy">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Lung Sounds &amp; Assessment</span>
+<span class="card-tag tag-navy">Assessment</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<h4>Normal Breath Sounds</h4>
+<ul>
+<li><strong>Vesicular:</strong> Low-pitched, soft, heard over peripheral lung fields. Inspiration &gt; expiration.</li>
+<li><strong>Bronchovesicular:</strong> Medium pitch, heard over mainstem bronchi (between scapulae). Inspiration = expiration.</li>
+<li><strong>Bronchial/Tracheal:</strong> High-pitched, harsh, heard over trachea. Expiration &gt; inspiration.</li>
+</ul>
+<h4>Abnormal / Adventitious Sounds</h4>
+<ul>
+<li><strong>Crackles (Rales):</strong> Discontinuous, popping sounds. Fine crackles = fluid in alveoli (CHF, pneumonia). Coarse crackles = secretions in airways.</li>
+<li><strong>Wheezes:</strong> High-pitched musical sounds, expiratory. Indicate narrowed airways (asthma, COPD, anaphylaxis).</li>
+<li><strong>Rhonchi:</strong> Low-pitched, snoring-like. Secretions in large airways. May clear with cough.</li>
+<li><strong>Stridor:</strong> High-pitched, inspiratory. Upper airway obstruction (croup, foreign body). Medical emergency.</li>
+<li><strong>Pleural Friction Rub:</strong> Grating/leathery sound on inspiration and expiration. Pleural inflammation (pericarditis, pleuritis).</li>
+<li><strong>Absent Breath Sounds:</strong> Pneumothorax, atelectasis, large pleural effusion.</li>
+</ul>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl</span>
+Crackles that DO NOT clear with coughing = fluid (CHF, pulmonary edema). Rhonchi that clear with coughing = secretions. This distinction drives nursing interventions.
+</div>
+<h4>Respiratory Assessment Components</h4>
+<ul>
+<li>Rate, rhythm, depth of respirations (normal: 12–20/min)</li>
+<li>SpO₂ (normal: 95–100%; COPD patients may tolerate 88–92%)</li>
+<li>Use of accessory muscles, nasal flaring, retractions</li>
+<li>Color (pallor, cyanosis — peripheral vs central)</li>
+<li>Cough: productive vs non-productive, sputum color/consistency</li>
+<li>Auscultate all lung fields (anterior, posterior, lateral)</li>
+<li>Percussion: resonance (normal), dullness (fluid), hyperresonance (air)</li>
+</ul>
+</div>
+</div>
+
+<!-- TRACHEOSTOMY -->
+
+<div class="card card-green">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Tracheostomy Care</span>
+<span class="card-tag tag-green">Procedure</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Always Keep at Bedside</span>
+Spare tracheostomy tube of same size and one size smaller, obturator, 10 mL syringe, suction equipment, bag-valve mask. Critical for emergency reinsertion.
+</div>
+<h4>Tracheostomy Care Procedure</h4>
+<ul>
+<li>Perform every 8 hours or as needed</li>
+<li>Use sterile technique for inner cannula cleaning (use sterile NS or H₂O₂ per facility policy)</li>
+<li>Change trach ties when soiled; keep one finger between tie and neck</li>
+<li>Assess stoma site: redness, drainage, skin breakdown</li>
+<li>Suction PRN (not routinely) — sterile technique, catheter size = 1/2 diameter of trach tube</li>
+</ul>
+<h4>Suctioning Steps</h4>
+<ul>
+<li>Pre-oxygenate with 100% O₂ for 30–60 seconds</li>
+<li>Insert catheter WITHOUT suction</li>
+<li>Apply suction while withdrawing (rotate catheter)</li>
+<li>Each pass: ≤10–15 seconds</li>
+<li>Allow rest and re-oxygenate between passes</li>
+<li>Limit to 3 passes maximum</li>
+</ul>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Decannulation Emergency</span>
+If trach tube falls out within 72 hours of surgery (tract not formed): call rapid response, cover stoma with sterile dressing, use bag-valve mask. After tract formed: nurse may reinsert with obturator.
+</div>
+<h4>Cuff Management</h4>
+<ul>
+<li>Cuff pressure should be 20–25 mmHg (minimal occlusive volume)</li>
+<li>Too high → tracheal ischemia/necrosis</li>
+<li>Too low → aspiration risk</li>
+<li>Deflate cuff before oral feedings if ordered; assess gag reflex</li>
+</ul>
+</div>
+</div>
+
+<!-- INFLUENZA -->
+
+<div class="card card-amber">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Influenza</span>
+<span class="card-tag tag-amber">Infectious</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<h4>Signs &amp; Symptoms</h4>
+<ul>
+<li>Abrupt onset fever (101–104°F), chills, rigors</li>
+<li>Severe myalgia, headache, malaise</li>
+<li>Dry cough, sore throat, rhinorrhea</li>
+<li>GI symptoms more common in children (N/V/D)</li>
+</ul>
+<h4>Treatment &amp; Nursing Interventions</h4>
+<ul>
+<li>Oseltamivir (Tamiflu) — most effective within 48 hours of symptom onset</li>
+<li>Antipyretics (acetaminophen, ibuprofen) — NOT aspirin in children (Reye's syndrome)</li>
+<li>Rest, hydration, symptom management</li>
+<li>Droplet precautions (surgical mask, private room or cohort)</li>
+<li>Annual vaccination — best prevention</li>
+</ul>
+<div class="alert alert-info">
+<span class="alert-label">ℹ Isolation Precautions</span>
+Influenza = <strong>Droplet Precautions</strong>. Surgical mask within 3 feet of patient. Private room preferred. Patient wears mask when transported. Handwashing is essential.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — High-Risk Populations</span>
+Highest complication risk: adults ≥65, children &lt;5, pregnant women, immunocompromised, those with chronic conditions (asthma, DM, heart disease). Prioritize vaccination in these groups.
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════ MEDICATIONS ═══════════════════════ -->
+
+<section id="medications" class="tab-panel">
+<div class="section-title">Medications</div>
+<div class="section-meta">Anticoagulants · ACE Inhibitors · Beta Blockers · Inhalers</div>
+
+<div class="alert alert-info">
+<span class="alert-label">ℹ Anticoagulation Comparison Table</span>
+Know the differences between Heparin, Lovenox, and Coumadin — highly testable in clinical judgment questions.
+</div>
+
+<!-- ANTICOAGULANT TABLE -->
+
+<div class="card card-red">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Anticoagulant Comparison: Heparin / Lovenox / Coumadin</span>
+<span class="card-tag tag-red">Meds</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div style="overflow-x:auto;">
+<table class="med-table">
+<thead>
+<tr>
+<th>Drug</th>
+<th>Route</th>
+<th>Mechanism</th>
+<th>Monitor</th>
+<th>Antidote</th>
+<th>Key Nursing Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Heparin</strong><br><span class="med-class tag-red">UFH</span></td>
+<td>IV (infusion) or SQ</td>
+<td>Activates antithrombin III → inhibits thrombin &amp; Xa</td>
+<td><strong>aPTT</strong> (goal: 60–100 sec, or 1.5–2.5× normal)</td>
+<td><strong>Protamine Sulfate</strong></td>
+<td>
+• Check aPTT every 6 hrs during titration<br>
+• HIT risk (↓platelets after 5–10 days)<br>
+• No IM injections<br>
+• Assess for bleeding: gums, urine, stool<br>
+• Monitor platelet count daily
+</td>
+</tr>
+<tr>
+<td><strong>Lovenox</strong><br><em>Enoxaparin</em><br><span class="med-class tag-navy">LMWH</span></td>
+<td>SQ only<br>(abdomen)</td>
+<td>Inhibits factor Xa preferentially</td>
+<td>Anti-Xa levels (if renal impairment, obesity, pregnancy); routine monitoring NOT required</td>
+<td><strong>Protamine Sulfate</strong> (partial reversal ~60%)</td>
+<td>
+• Do NOT expel air bubble before injection<br>
+• Rotate sites; do NOT rub after injection<br>
+• Dose adjust in renal impairment (CrCl &lt;30)<br>
+• More predictable than UFH<br>
+• Preferred for bridge therapy
+</td>
+</tr>
+<tr>
+<td><strong>Coumadin</strong><br><em>Warfarin</em><br><span class="med-class tag-brown">Vitamin K Antagonist</span></td>
+<td>PO</td>
+<td>Inhibits Vitamin K-dependent clotting factors (II, VII, IX, X)</td>
+<td><strong>PT/INR</strong><br>Standard goal INR: 2–3<br>Mechanical valve: 2.5–3.5</td>
+<td><strong>Vitamin K</strong> (slow, 24–48 hrs) or <strong>FFP</strong> (fast, hemorrhage)</td>
+<td>
+• Takes 3–5 days to reach therapeutic level<br>
+• Many drug/food interactions (Vitamin K rich foods ↑INR)<br>
+• Consistent Vitamin K intake (don't eliminate leafy greens, just be consistent)<br>
+• Avoid OTC NSAIDs/aspirin (↑bleeding risk)<br>
+• Teach to avoid alcohol<br>
+• Report unusual bruising or bleeding
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — HIT (Heparin-Induced Thrombocytopenia)</span>
+HIT type II: antibody-mediated, paradoxically causes thrombosis (not just bleeding). Onset 5–10 days after heparin. STOP all heparin products immediately, including heparin flushes. Switch to argatroban or bivalirudin.
+</div>
+</div>
+</div>
+
+<!-- ACE INHIBITORS -->
+
+<div class="card card-green">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">ACE Inhibitors</span>
+<span class="card-tag tag-green">Meds</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<h4>Common Drugs</h4>
+<p>Lisinopril, Enalapril, Captopril, Ramipril, Benazepril (<em>-pril suffix</em>)</p>
+<h4>Mechanism</h4>
+<p>Inhibit Angiotensin-Converting Enzyme → prevent conversion of Angiotensin I → Angiotensin II → ↓vasoconstriction, ↓aldosterone → ↓BP, ↓afterload, ↓preload.</p>
+<h4>Indications</h4>
+<ul>
+<li>Hypertension (first-line)</li>
+<li>Heart failure (reduce mortality)</li>
+<li>Post-MI (cardioprotective)</li>
+<li>Diabetic nephropathy (renoprotective)</li>
+<li>Chronic Kidney Disease</li>
+</ul>
+<h4>Adverse Effects</h4>
+<ul>
+<li><strong>Dry, persistent cough</strong> (most common; due to ↑bradykinin) — switch to ARB if intolerable</li>
+<li><strong>Hyperkalemia</strong> — monitor K⁺</li>
+<li><strong>First-dose hypotension</strong> — start low, go slow; assess orthostatic BP</li>
+<li><strong>Angioedema</strong> (rare but life-threatening) — swelling of lips/tongue/throat; STOP drug immediately</li>
+<li>Renal impairment — monitor BUN/Creatinine</li>
+<li><strong>Contraindicated in pregnancy</strong> (Category D/X — teratogenic)</li>
+</ul>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Angioedema — ACE Inhibitor Emergency</span>
+Angioedema can occur at any time during therapy (even after years of use). Stop drug immediately, administer epinephrine if airway compromised, maintain airway, notify provider.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl</span>
+If a patient has a persistent dry cough on an ACE inhibitor, the appropriate action is to notify the provider and anticipate switching to an <strong>ARB (Angiotensin Receptor Blocker)</strong> — same benefits, no bradykinin effect.
+</div>
+</div>
+</div>
+
+<!-- BETA BLOCKERS -->
+
+<div class="card card-navy">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Beta Blockers</span>
+<span class="card-tag tag-navy">Meds</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<h4>Common Drugs</h4>
+<p>Metoprolol (selective β₁), Carvedilol (non-selective α/β), Atenolol, Propranolol (non-selective), Bisoprolol (<em>-olol suffix</em>)</p>
+<h4>Mechanism</h4>
+<p>Block beta-adrenergic receptors → ↓HR, ↓contractility, ↓BP, ↓renin release. β₁ (cardiac), β₂ (bronchial/vascular).</p>
+<h4>Indications</h4>
+<ul>
+<li>HTN</li>
+<li>Angina, post-MI (reduce mortality)</li>
+<li>Heart failure (carvedilol, metoprolol succinate)</li>
+<li>Arrhythmias (rate control in A-fib)</li>
+<li>Migraine prophylaxis</li>
+</ul>
+<h4>Adverse Effects</h4>
+<ul>
+<li>Bradycardia — hold if HR &lt;60 bpm</li>
+<li>Hypotension — assess before administering</li>
+<li>Bronchospasm — avoid non-selective BBs in asthma/COPD (use cardioselective)</li>
+<li>Fatigue, dizziness, depression</li>
+<li>Masks hypoglycemia symptoms in diabetics (except diaphoresis)</li>
+<li>Sexual dysfunction</li>
+</ul>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Never Abruptly Stop Beta Blockers</span>
+Abrupt discontinuation → rebound tachycardia, hypertension, angina, MI. Taper dose gradually over 1–2 weeks under medical supervision.
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Hold Parameter</span>
+Hold beta blocker and notify provider if apical HR is &lt;60 bpm or systolic BP is &lt;90 mmHg. Document and report. Do not administer.
+</div>
+</div>
+</div>
+
+<!-- INHALERS -->
+
+<div class="card card-green">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Salmeterol &amp; Beclomethasone Dipropionate</span>
+<span class="card-tag tag-green">Respiratory Meds</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div style="overflow-x:auto;">
+<table class="med-table">
+<thead>
+<tr>
+<th>Drug</th>
+<th>Class</th>
+<th>Mechanism</th>
+<th>Use</th>
+<th>Key Nursing Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Salmeterol</strong><br><em>(Serevent)</em></td>
+<td><span class="med-class tag-navy">LABA — Long-Acting Beta-2 Agonist</span></td>
+<td>Bronchodilation via β₂ receptor stimulation (long-acting, 12 hrs)</td>
+<td>Maintenance therapy for asthma (with ICS) and COPD. NOT for acute bronchospasm.</td>
+<td>
+• Never use alone for asthma (↑mortality risk without ICS)<br>
+• Not a rescue inhaler<br>
+• Rinse mouth after use if combined with ICS<br>
+• Use BID (every 12 hours)<br>
+• May cause tachycardia, tremor, hypokalemia
+</td>
+</tr>
+<tr>
+<td><strong>Beclomethasone Dipropionate</strong><br><em>(QVAR)</em></td>
+<td><span class="med-class tag-green">ICS — Inhaled Corticosteroid</span></td>
+<td>Reduces airway inflammation; decreases mucus secretion</td>
+<td>Long-term control of asthma. NOT for acute attacks.</td>
+<td>
+• <strong>ALWAYS rinse mouth after use</strong> (prevents oral candidiasis)<br>
+• Use spacer device to improve delivery<br>
+• Takes days–weeks to reach full effect<br>
+• Not a rescue medication<br>
+• May suppress adrenal function with high doses<br>
+• Monitor for oral thrush
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Inhaler Order</span>
+When a patient has both a bronchodilator (SABA/LABA) and an inhaled corticosteroid, administer the <strong>bronchodilator FIRST</strong>, wait 1–5 minutes, then give the corticosteroid. This opens airways so the steroid reaches deeper.
+</div>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ Oral Candidiasis Prevention</span>
+Patients on inhaled corticosteroids MUST rinse mouth with water and spit after every use. Failure to do so causes oropharyngeal candidiasis (white patches, sore throat). Assess mouth at each visit.
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════ LABS & ELECTROLYTES ═══════════════════════ -->
+
+<section id="labs" class="tab-panel">
+<div class="section-title">Labs &amp; Electrolytes</div>
+<div class="section-meta">Reference Ranges · Critical Values · Cardiac Biomarkers · Coag Studies</div>
+
+<!-- ELECTROLYTES TABLE -->
+
+<div class="card card-green">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Electrolyte Reference Ranges</span>
+<span class="card-tag tag-green">Lab Values</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div style="overflow-x:auto;">
+<table class="lab-table">
+<thead>
+<tr>
+<th>Electrolyte</th>
+<th>Normal Range</th>
+<th>Critical Low</th>
+<th>Critical High</th>
+<th>Low S&S</th>
+<th>High S&S</th>
+<th>Key Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Potassium (K⁺)</strong></td>
+<td><span class="lab-ref">3.5–5.0 mEq/L</span></td>
+<td><span class="lab-critical">&lt;3.0</span></td>
+<td><span class="lab-critical">&gt;6.0</span></td>
+<td>Muscle weakness, cramps, dysrhythmias, constipation, U-wave on ECG, fatigue</td>
+<td>Peaked T-waves, wide QRS, bradycardia, muscle weakness (ascending), cardiac arrest</td>
+<td>Most critical for cardiac function. ↑risk of digoxin toxicity with hypokalemia. Give K⁺ IV slowly (≤10 mEq/hr peripherally, ≤20 mEq/hr central). NEVER IV push.</td>
+</tr>
+<tr>
+<td><strong>Sodium (Na⁺)</strong></td>
+<td><span class="lab-ref">135–145 mEq/L</span></td>
+<td><span class="lab-critical">&lt;120</span></td>
+<td><span class="lab-critical">&gt;160</span></td>
+<td>Hyponatremia: N/V, headache, confusion, seizures, cerebral edema</td>
+<td>Hypernatremia: thirst, dry mucous membranes, confusion, lethargy, seizures</td>
+<td>Correct slowly to prevent osmotic demyelination (hyponatremia) or cerebral edema (hypernatremia). Fluid balance marker.</td>
+</tr>
+<tr>
+<td><strong>Magnesium (Mg²⁺)</strong></td>
+<td><span class="lab-ref">1.5–2.5 mEq/L</span></td>
+<td><span class="lab-critical">&lt;1.0</span></td>
+<td><span class="lab-critical">&gt;4.0</span></td>
+<td>Hypomagnesemia: tremors, seizures, dysrhythmias, ↑DTRs, Torsades de Pointes</td>
+<td>Hypermagnesemia: lethargy, ↓reflexes, respiratory depression, cardiac arrest</td>
+<td>Often lost with loop diuretics. Required for K⁺ and Ca²⁺ reabsorption. Antidote for hypermagnesemia: Calcium gluconate.</td>
+</tr>
+<tr>
+<td><strong>Phosphorus (PO₄³⁻)</strong></td>
+<td><span class="lab-ref">2.5–4.5 mg/dL</span></td>
+<td><span class="lab-critical">&lt;1.0</span></td>
+<td><span class="lab-critical">&gt;7.0</span></td>
+<td>Hypophosphatemia: muscle weakness, bone pain, confusion, respiratory failure</td>
+<td>Hyperphosphatemia: tetany (↓Ca²⁺), calcifications, itching, renal failure</td>
+<td>Inverse relationship with Ca²⁺. Common in renal failure (↑phosphorus). Treat hyperphosphatemia with phosphate binders.</td>
+</tr>
+<tr>
+<td><strong>Calcium (Ca²⁺)</strong></td>
+<td><span class="lab-ref">8.5–10.5 mg/dL</span></td>
+<td><span class="lab-critical">&lt;7.0</span></td>
+<td><span class="lab-critical">&gt;12.0</span></td>
+<td>Hypocalcemia: Trousseau's sign, Chvostek's sign, tetany, seizures, ↑QT</td>
+<td>Hypercalcemia: "Bones, Stones, Groans, Moans" — bone pain, kidney stones, abd pain, confusion</td>
+<td>Check Trousseau's (BP cuff inflation) &amp; Chvostek's (tap facial nerve) for neuromuscular irritability.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — K⁺ and Digoxin</span>
+Hypokalemia INCREASES the risk of digoxin toxicity. Always check K⁺ before administering digoxin. Signs of dig toxicity: N/V, visual changes (yellow-green halos), bradycardia, dysrhythmias.
+</div>
+</div>
+</div>
+
+<!-- CARDIAC BIOMARKERS -->
+
+<div class="card card-red">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Cardiac Biomarkers &amp; Coagulation Labs</span>
+<span class="card-tag tag-red">Lab Values</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div style="overflow-x:auto;">
+<table class="lab-table">
+<thead>
+<tr>
+<th>Lab</th>
+<th>Normal Range</th>
+<th>Significance</th>
+<th>Timing (Post-MI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Troponin I</strong></td>
+<td><span class="lab-ref">&lt;0.04 ng/mL</span></td>
+<td>Most specific for MI. Gold standard.</td>
+<td>Rises 3–6 hrs; peaks 14–18 hrs; elevated 5–7 days</td>
+</tr>
+<tr>
+<td><strong>Troponin T</strong></td>
+<td><span class="lab-ref">&lt;0.01 ng/mL</span></td>
+<td>Highly specific; also elevated in PE, myocarditis</td>
+<td>Rises 3–4 hrs; elevated up to 14 days</td>
+</tr>
+<tr>
+<td><strong>CK-MB</strong></td>
+<td><span class="lab-ref">&lt;5% of total CK</span></td>
+<td>Cardiac-specific isoenzyme; used to detect reinfarction</td>
+<td>Rises 3–6 hrs; peaks 12–24 hrs; normal 36–48 hrs</td>
+</tr>
+<tr>
+<td><strong>BNP</strong></td>
+<td><span class="lab-ref">&lt;100 pg/mL</span></td>
+<td>↑ in heart failure; severity &amp; prognosis indicator</td>
+<td>Not MI-specific; reflects ventricular stretch</td>
+</tr>
+<tr>
+<td><strong>aPTT</strong></td>
+<td><span class="lab-ref">25–35 seconds</span></td>
+<td>Monitors Heparin therapy. Therapeutic: 60–100 sec (or 1.5–2.5× normal)</td>
+<td>Coagulation / anticoagulation monitoring</td>
+</tr>
+<tr>
+<td><strong>PT/INR</strong></td>
+<td><span class="lab-ref">PT: 11–13 sec; INR: 0.8–1.2</span></td>
+<td>Monitors Warfarin therapy. Therapeutic INR: 2–3 (3 for mech valve)</td>
+<td>Coagulation / anticoagulation monitoring</td>
+</tr>
+<tr>
+<td><strong>D-Dimer</strong></td>
+<td><span class="lab-ref">&lt;0.5 mcg/mL</span></td>
+<td>Elevated in DVT/PE — high sensitivity, low specificity (also elevated in infection, pregnancy)</td>
+<td>Thromboembolism screening</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════ ASSESSMENT ═══════════════════════ -->
+
+<section id="assessment" class="tab-panel">
+<div class="section-title">Cardiac Assessment</div>
+<div class="section-meta">Heart Sounds · Inspection · Auscultation · Imaging</div>
+
+<div class="card card-red">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Cardiac Assessment Techniques</span>
+<span class="card-tag tag-red">Assessment</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<h4>Inspection</h4>
+<ul>
+<li>Skin color: pallor, cyanosis (peripheral vs central), jaundice</li>
+<li>Edema: bilateral pitting edema (cardiac), unilateral (lymphedema/DVT)</li>
+<li>JVD (Jugular Venous Distension): assess at 45° — elevated in R-sided HF, pericardial tamponade</li>
+<li>Capillary refill: ≤2 seconds normal</li>
+<li>Clubbing: chronic hypoxia indicator</li>
+</ul>
+<h4>Auscultation — Heart Sounds</h4>
+<ul>
+<li><strong>S1 ("Lub")</strong> — closure of mitral + tricuspid valves; marks onset of systole. Loudest at apex (mitral area).</li>
+<li><strong>S2 ("Dub")</strong> — closure of aortic + pulmonic valves; marks onset of diastole. Loudest at base.</li>
+<li><strong>S3 (Ventricular Gallop)</strong> — early diastole; blood filling a compliant ventricle. Normal in children; ABNORMAL in adults → CHF, volume overload. "Ken-tucky" rhythm.</li>
+<li><strong>S4 (Atrial Gallop)</strong> — late diastole; atrial contraction against stiff ventricle. Associated with HTN, CAD, hypertrophy. "Tenn-es-see" rhythm.</li>
+</ul>
+<h4>Auscultation Sites (APT PM)</h4>
+<ul>
+<li><strong>A</strong>ortic — 2nd ICS, right sternal border</li>
+<li><strong>P</strong>ulmonic — 2nd ICS, left sternal border</li>
+<li><strong>T</strong>ricuspid — 4th ICS, left sternal border</li>
+<li><strong>M</strong>itral (Apex) — 5th ICS, midclavicular line</li>
+<li><strong>E</strong>rb's Point — 3rd ICS, left sternal border (murmur best heard here)</li>
+</ul>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — S3 vs S4</span>
+S3: early diastole, sounds like "Ken-tucky" (Ken=S1, tuc=S2, ky=S3). Indicates volume overload — think CHF. S4: late diastole, sounds like "Tenn-es-see." Indicates stiff/noncompliant ventricle — think HTN or cardiomyopathy.
+</div>
+<h4>Murmurs</h4>
+<ul>
+<li>Graded I–VI (I = barely audible, VI = heard without stethoscope)</li>
+<li>Describe: location, radiation, timing (systolic vs diastolic), quality, intensity</li>
+<li>Systolic murmur at apex → mitral regurgitation</li>
+<li>Diastolic murmur at apex → mitral stenosis</li>
+<li>Pericardial friction rub → pericarditis (scratchy, heard throughout cardiac cycle)</li>
+</ul>
+<h4>Palpation</h4>
+<ul>
+<li>Point of Maximal Impulse (PMI) — 5th ICS, MCL; displaced laterally in cardiomegaly</li>
+<li>Peripheral pulses: rate, rhythm, strength (0–4+ scale)</li>
+<li>Presence of thrills (palpable murmur)</li>
+</ul>
+</div>
+</div>
+
+<!-- CT/MRI -->
+
+<div class="card card-brown">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">CT Scan &amp; MRI — Nursing Considerations</span>
+<span class="card-tag tag-brown">Imaging</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="two-col">
+<div>
+<h4>CT Scan</h4>
+<ul>
+<li>Uses ionizing radiation + X-rays</li>
+<li>Faster than MRI; good for acute situations</li>
+<li>Contrast dye common: assess for contrast allergy, renal function (Creatinine/eGFR)</li>
+<li>Hold Metformin 48 hrs before/after contrast (lactic acidosis risk)</li>
+<li>Remove all metallic objects</li>
+<li>Assess for claustrophobia</li>
+<li>Cardiac CT: coronary artery calcium scoring, CT angiography (CTA)</li>
+</ul>
+<div class="alert alert-info">
+<span class="alert-label">ℹ Contrast Pre-Screening</span>
+Check: Creatinine (goal &lt;1.5 mg/dL), allergy history (shellfish/iodine). Pre-medicate with diphenhydramine and prednisone if prior contrast allergy.
+</div>
+</div>
+<div>
+<h4>MRI</h4>
+<ul>
+<li>Uses magnetic fields; NO radiation</li>
+<li>Superior soft tissue contrast; cardiac structure &amp; function</li>
+<li>Contraindicated: pacemakers, cochlear implants, some metallic implants</li>
+<li>Gadolinium contrast: safe in most patients; contraindicated in GFR &lt;30 (NSF risk)</li>
+<li>Remove ALL metallic items (jewelry, hairpins, etc.)</li>
+<li>Claustrophobia: sedation may be needed</li>
+<li>Cardiac MRI: assess EF, myocardial viability, pericarditis, cardiomyopathy</li>
+</ul>
+<div class="alert alert-danger">
+<span class="alert-label">⚠ MRI Safety — ABSOLUTE Contraindications</span>
+Ferromagnetic implants (certain aneurysm clips, older pacemakers, cochlear implants). ALWAYS screen the patient using a standardized MRI screening form before entry.
+</div>
+</div>
+</div>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Post-Contrast Care</span>
+After contrast administration: encourage fluids (flush kidneys), monitor urine output, assess for delayed allergic reaction (urticaria, dyspnea) for 30–60 min. Patients with renal impairment are at risk for contrast-induced nephropathy.
+</div>
+</div>
+</div>
+</section>
+
+<!-- ═══════════════════════ DOSAGE ═══════════════════════ -->
+
+<section id="dosage" class="tab-panel">
+<div class="section-title">Dosage Calculations</div>
+<div class="section-meta">3 Dosage Questions Expected — Master These Formulas</div>
+
+<div class="alert alert-info">
+<span class="alert-label">ℹ Exam Note</span>
+There are 3 dosage calculation questions on the exam. Common types: basic dose/volume calculations, weight-based dosing, and IV flow rate calculations.
+</div>
+
+<div class="card card-purple">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Essential Dosage Formulas</span>
+<span class="card-tag tag-purple">Calculations</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div class="dosage-box">
+<span class="dosage-label">Formula 1 — Basic Dose/Volume</span>
+<p>Used to calculate how many mL to administer from a stock solution.</p>
+<code class="dosage-formula">Volume to give = (Desired Dose ÷ Dose on Hand) × Volume on Hand</code>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><strong>Example:</strong> Order: Metoprolol 50 mg PO. Available: 25 mg/tablet. → (50÷25)×1 = 2 tablets</p>
+</div>
+
+```
+<div class="dosage-box">
+<span class="dosage-label">Formula 2 — Weight-Based Dosing</span>
+<p>Common for heparin, enoxaparin, pediatric medications.</p>
+<code class="dosage-formula">Total Dose = Weight (kg) × Dose per kg</code>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><strong>Example:</strong> Heparin 80 units/kg IV bolus. Patient weighs 70 kg. → 80 × 70 = 5,600 units IV bolus.</p>
+<p style="font-size:0.85rem;"><strong>Convert lbs to kg:</strong> lbs ÷ 2.2 = kg</p>
+</div>
+
+<div class="dosage-box">
+<span class="dosage-label">Formula 3 — IV Flow Rate (mL/hr)</span>
+<p>Used for IV pump rate calculation.</p>
+<code class="dosage-formula">Rate (mL/hr) = Total Volume (mL) ÷ Time (hr)</code>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><strong>Example:</strong> 1000 mL NS over 8 hours → 1000 ÷ 8 = 125 mL/hr</p>
+</div>
+
+<div class="dosage-box">
+<span class="dosage-label">Formula 4 — IV Drip Rate (drops/min — gravity)</span>
+<code class="dosage-formula">gtt/min = (Volume to infuse × Drop factor) ÷ Time in minutes</code>
+<p style="margin-top:0.5rem;font-size:0.85rem;"><strong>Drop factors:</strong> Macrodrip: 10, 15, or 20 gtt/mL | Microdrip: 60 gtt/mL</p>
+<p style="font-size:0.85rem;"><strong>Example:</strong> 500 mL over 4 hrs with 20 gtt/mL set → (500×20) ÷ 240 = 41.6 → 42 gtt/min</p>
+</div>
+
+<div class="dosage-box">
+<span class="dosage-label">Formula 5 — Unit Conversion (mcg/min to mL/hr)</span>
+<code class="dosage-formula">mL/hr = (Dose in mcg/min × 60 min × Weight in kg) ÷ Concentration of drug</code>
+<p style="margin-top:0.5rem;font-size:0.85rem;">Used for vasoactive drips (dopamine, dobutamine, nitroglycerin). Know your concentration.</p>
+</div>
+
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — Rounding Rules</span>
+Round mL/hr to nearest whole number. Round gtt/min to nearest whole number. Round tablets to nearest half. NEVER round weight-based critical care medications — use precise math.
+</div>
+
+<h4>Heparin Infusion Dosing (Common Exam Scenario)</h4>
+<ul>
+<li>Bolus: 80 units/kg IV → Infusion: 18 units/kg/hr</li>
+<li>Available concentration: 25,000 units in 250 mL NS (= 100 units/mL)</li>
+<li>Adjust rate based on aPTT results per protocol</li>
+</ul>
+<div class="alert alert-amber">
+<span class="alert-label">📐 Dosage Tip</span>
+Always double-check: (1) Right drug, (2) Right dose, (3) Right route, (4) Right time, (5) Right patient + 3 more rights: right documentation, right reason, right response.
+</div>
+</div>
+```
+
+</div>
+</section>
+
+<!-- ═══════════════════════ PROCEDURES ═══════════════════════ -->
+
+<section id="procedures" class="tab-panel">
+<div class="section-title">Procedures &amp; Diagnostics</div>
+<div class="section-meta">Tracheostomy · CT/MRI · Cardiac Monitoring</div>
+
+<div class="card card-navy">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">12-Lead ECG Basics</span>
+<span class="card-tag tag-navy">Procedure</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<h4>Normal Intervals</h4>
+<ul>
+<li><strong>PR interval:</strong> 0.12–0.20 sec (3–5 small boxes) — AV conduction time</li>
+<li><strong>QRS complex:</strong> ≤0.12 sec (≤3 small boxes) — ventricular depolarization</li>
+<li><strong>QT interval:</strong> ≤0.44 sec — ventricular repolarization (prolonged = risk of Torsades)</li>
+</ul>
+<h4>Key ECG Changes to Know</h4>
+<ul>
+<li><strong>ST elevation (STEMI):</strong> &gt;1 mm in ≥2 contiguous leads — occlusion</li>
+<li><strong>ST depression:</strong> Ischemia (non-occlusive)</li>
+<li><strong>Saddle-shaped ST elevation:</strong> Pericarditis (diffuse, all leads)</li>
+<li><strong>Peaked T-waves:</strong> Hyperkalemia</li>
+<li><strong>Flattened/inverted T-waves + U-wave:</strong> Hypokalemia</li>
+<li><strong>Prolonged QT:</strong> Hypomagnesemia, hypokalemia, medications</li>
+</ul>
+<div class="nclex-pearl">
+<span class="pearl-label">✦ NCLEX Pearl — STEMI Leads</span>
+Anterior MI → leads V1–V4. Inferior MI → leads II, III, aVF. Lateral MI → leads I, aVL, V5–V6. Posterior MI → reciprocal changes in V1–V2 (ST depression, tall R wave).
+</div>
+</div>
+</div>
+
+<div class="card card-green">
+<div class="card-header" onclick="toggleCard(this)">
+<span class="card-title">Pre/Post-Procedure Nursing Care Summary</span>
+<span class="card-tag tag-green">Nursing Care</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</div>
+<div class="card-body">
+<div style="overflow-x:auto;">
+<table class="med-table">
+<thead>
+<tr>
+<th>Procedure</th>
+<th>Pre-Procedure</th>
+<th>Post-Procedure</th>
+<th>Key Complications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CT with Contrast</strong></td>
+<td>NPO per order; check Cr/eGFR; allergy screening; hold Metformin; IV access; consent</td>
+<td>Encourage fluids; monitor urine output; assess for allergic reaction; resume Metformin 48 hrs later</td>
+<td>Contrast-induced nephropathy, allergic reaction, extravasation</td>
+</tr>
+<tr>
+<td><strong>MRI with/without Gadolinium</strong></td>
+<td>Metal screening form; remove ALL metals; IV access if contrast; check GFR; sedation assessment</td>
+<td>Monitor if sedated; encourage fluids if gadolinium given; assess for NSF signs in renal patients</td>
+<td>NSF (nephrogenic systemic fibrosis), claustrophobia, device interference</td>
+</tr>
+<tr>
+<td><strong>Cardiac Catheterization / PCI</strong></td>
+<td>NPO; consent; IV access; mark distal pulses; aspirin/clopidogrel; shave access site; baseline vitals/labs</td>
+<td>Bedrest (femoral: 2–6 hrs); check access site (hematoma, bleeding); distal pulses Q15 min → Q30 → Q1hr; monitor for dysrhythmias; adequate hydration</td>
+<td>Hematoma, retroperitoneal bleeding, arrhythmias, contrast reaction, reocclusion, stroke</td>
+</tr>
+<tr>
+<td><strong>Tracheostomy</strong></td>
+<td>Consent; baseline airway assessment; emergency equipment ready; NPO; informed re: communication changes</td>
+<td>Sterile trach care Q8h; cuff pressure monitoring; suctioning PRN; communication aids; speech therapy referral</td>
+<td>Decannulation, tracheal stenosis, infection, hemorrhage, obstruction</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<script>
+function showTab(id, btn) {
+document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+document.querySelectorAll('.tab-list button').forEach(b => b.classList.remove('active'));
+const panel = document.getElementById(id);
+if (panel) panel.classList.add('active');
+if (btn) btn.classList.add('active');
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleCard(headerEl) {
+const card = headerEl.closest('.card');
+card.classList.toggle('open');
+}
+
+// Open first card in each tab automatically for overview
+document.addEventListener('DOMContentLoaded', () => {
+const overview = document.getElementById('overview');
+if (overview) {
+const cards = overview.querySelectorAll('.card');
+cards.forEach(c => c.classList.add('open'));
+}
+});
+</script>
+
+</body>
+</html>
